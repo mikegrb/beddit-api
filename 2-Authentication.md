@@ -80,6 +80,86 @@ Error identifier | HTTP Status | Description
 invalid_credentials | 400 | The password does not match, suggest reset?
 
 
+## User authentication: Web flow
+
+The OAuth2 web flow is intended for web, desktop and other applications. Instead
+of the client application asking for username and password directly, the user is
+directed from your app to Beddit website, where they user may choose to
+authorize the client application to access user's sleep and other data.
+
+To protect our user's privacy, Beddit strongly encourages applications to use
+the web flow instead of the mobile flow wherever possible.
+
+### Step 0: Registering your app
+
+To use the web authentication flow, you need to register your app with Beddit.
+You can do this by sending the following information to support@beddit.com.
+
+* Name of your application
+* A short description
+* Homepage
+* The app author's Beddit username (email used to create Beddit account)
+* One or more redirect URL:s (for example, localhost for development, and one for staging and production environment). Note that other than local host, these need to be HTTPS.
+
+We will then contact you with the required information to use the API:
+
+* client_id
+* client_secret
+
+
+### Step 1: GET /api/v1/auth/authorize_web
+
+First thing to do is to direct user to this authorization resource. The
+following GET parameters are required.
+
+Parameter name | Value
+---------------|------
+client_id | Your application's client_id
+redirect_uri | Your application's redirect_uri
+response_type | Must be set to **code**
+
+If the user is not already signed in to Beddit, Beddit website will ask user's
+username and password. After that, user may choose to authorize your application
+to access her data.
+
+
+### Step 2: Beddit redirects back to your application
+
+Beddit redirects back to your application's redirect_uri specified in previous
+request. Beddit passes one of the following parameters to the redirect_uri,
+depending on whether the user authorized your application.
+
+Parameter name | Value
+---------------|------
+code | A secret code that can be exchanged to an access token
+error | If the user did not authorize your app, error is set to **access_denied**
+
+
+### Step 3: POST /api/v1/auth/authorize
+
+If all went well, the user authorized your application, and you can now exchange
+the one-time code for an access token. Make a POST request with following
+parameters set.
+
+Parameter name | Value
+---------------|------
+client_id | Your applications id
+redirect_uri | Your applications redirect_uri
+client_secret | Your client_secret
+grant_type | Must be set to **authorization_code**
+code | The one-time, secret code you received in previous step
+
+In response, you will get the access token for the user
+
+**Example response**
+
+```javascript
+{
+  "access_token" : "jcaurhmfeaisuxfmsecfkjebsf"
+}
+```
+
+
 ## Checking access token information
 
 ### GET /api/v1/auth/token_info
