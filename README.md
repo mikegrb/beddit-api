@@ -53,6 +53,12 @@ to comply with Beddit's privacy policy and API policies.
 
 The documentation is divided into following chapters.
 
+To stay updated about changes and new features in Beddit API, please subscribe
+for our API updates newsletter here:
+
+http://beddit.us4.list-manage.com/subscribe?u=0b978891a5fbf9cb71fa51181&id=01962bce78
+
+
 ## [General](1-General.md)
 
 Documents the general conventions used throughout the API.
