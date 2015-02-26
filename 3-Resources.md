@@ -242,13 +242,6 @@ all of the fields. A field may be missing if it was not possible to compute it.
     "score_awakenings" : 1
   },
   "time_value_tracks" : {
-    "alarm_event" : {
-      "items" : [
-        [1393252920.32,  0],
-        [1393252926.514, 2]
-      ],
-      "value_data_type" : "float32"
-    },
     "sleep_stages" : {
       "items" : [
         [1393249545.041, 65],
@@ -293,7 +286,8 @@ sleep_latency | The time it takes to fall asleep, in seconds. If the subject did
 away_episode_count | Number of absences during the night
 total_snoring_episode_duration | Total amount of snoring, in seconds
 stage_duration_A | Total time in away state in the measurement period, in seconds
-stage_duration_S | Total time in sleep state in the measurement period
+stage_duration_S | Total time in sleep state in the measurement period. To calculate total sleeping time, you need to stage_duration_R to this.
+stage_duration_R | Total time in restless sleep state in the measurement period.
 stage_duration_W | Total time in wake state in the measurement period
 stage_duration_G | Total amount of "missing signal" time in the measurement period
 score_bed_exits | Sleep score item for number of bed exits
@@ -308,18 +302,6 @@ score_awakenings | Sleep score item for number of awakenings during the night
 A time-value track in a Sleep object is a sequence of timestamp-value pairs,
 where the timestamp is a Unix timestamp (seconds since Jan 1, 1970).
 The time-value tracks are listed below.
-
-#### Alarm event
-
-List of alarm clock time and event type values.
-
-Value | Meaning
-------|--------
-0 | Alarm started ringing
-1 | User snoozed alarm
-2 | User dismissed alarm
-3 | Alarm was ignored (stopped automatically after x minutes)
-4 | Alarm was automatically dismissed after user had ignored it several times
 
 #### Sleep stages
 
