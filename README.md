@@ -32,9 +32,7 @@ Do let us know about anything cool that you build on top of our data so we can
 share it in our channels!
 
 The API is free for all during the Beta period. At all times, Beddit reserves
-the right to make changes to its API policy. Currently, only the Beddit Android app
-works with the API. Support for iOS app is coming soon - just hold on tight 'cause
-Kansas will eventually go bye bye (hint: "The Matrix").
+the right to make changes to its API policy.
 
 On a more serious note, please understand that sleep data is very personal and sensitive.
 You should take extra care to use and store it according to the best privacy and security
