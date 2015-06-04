@@ -66,9 +66,19 @@ Documents the general conventions used throughout the API.
 All access to user data in Beddit is authenticated with access tokens. This
 chapter describes how authentication works and how access token is obtained.
 
-## [Resources](3-Resources.md)
+## Resources
+
+### [User account related resources](3_1-UserResources.md)
+
+This chapter describes the resources for retrieving user data.
+
+### [Sleep data resources](3_2-SleepResources.md)
 
 This chapter describes the resources for retrieving sleep data.
+
+### [Session data resources](3_3-SessionResources.md)
+
+This chapter describes the resources for retrieving session data.
 
 
 If you need help in using the API, please contact our customer support:
