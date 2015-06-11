@@ -26,6 +26,13 @@ all of the fields. A field may be missing if it was not possible to compute it.
     "score_awakenings" : 1
   },
   "time_value_tracks" : {
+    "actigram" : {
+      "items": [
+        [1393252920.32, 15],
+        [1393252926.514, 9]
+      ],
+      "value_data_type" : "float32"
+    },
     "alarm_event" : {
       "items" : [
         [1393252920.32,  0],
@@ -104,6 +111,12 @@ Value | Meaning
 2 | User dismissed alarm
 3 | Alarm was ignored (stopped automatically after x minutes)
 4 | Alarm was automatically dismissed after user had ignored it several times
+
+#### Actigram
+
+The timestamp represents the start time of an epoch and the value is the number
+of detected movements during the epoch. The movements are reported only for 
+epochs during which the user is present on the bed. The epoch is 60 s long.
 
 #### Sleep stages
 

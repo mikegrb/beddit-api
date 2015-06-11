@@ -32,7 +32,14 @@ all of the fields. A field may be missing if it was not possible to compute it.
       }
    },
    "time_value_tracks" : {
-     "snoring_events" : {
+      "actigram" : {
+         "value_data_type" : "float32",
+         "items" : [
+            [0, 29973.82],
+            ...
+         ]
+      },
+      "snoring_events" : {
          "value_data_type" : "float32",
          "items" : []
       },
@@ -41,12 +48,21 @@ all of the fields. A field may be missing if it was not possible to compute it.
          "items" : [
             [40.3, 4.1],
             ...
+         ]
       },
       "heart_rate" : {
          "value_data_type" : "float32",
          "items" : [
             [60, 64.59961],
             ...
+         ]
+      },
+      "sensor_status" : {
+         "value_data_type" : "uint8",
+         "items" : [
+            [58.4, 1],
+            [29316.8, 1]
+         ]
       }
    },
 
@@ -104,23 +120,49 @@ The noise level, measured from 100 ms windows.
 A time-value track in a Session object is a sequence of timestamp-value pairs,
 where the timestamp is a Unix timestamp (seconds since Jan 1, 1970).
 
+#### Actigram
+
+The timestamp represents the start time of an epoch and the value is the number
+of detected movements during the epoch. The movements are reported only for 
+epochs during which the user is present on the bed. The epoch is 60 s long.
+
 #### Snoring events
 
 value data type: **float32**
 
-The timestamp represents the time of a snoring event and the value is the length of the event. The snoring events represent contiguous sequences of respiration activity with snoring and have around 3-second resolution.
+The timestamp represents the time of a snoring event and the value is the
+length of the event. The snoring events represent contiguous sequences of
+respiration activity with snoring and have around 3-second resolution.
 
 #### Respiration cycles
 
 value data type: **float32**
 
-The timestamp represents the start time of a respiration cycle and the value is the length of the cycle. These respiration cycles are not suitable for direct visualization (e.g. respiration rate curve, respiration rate variability), but only the average respiration rate can be computed based on them.
+The timestamp represents the start time of a respiration cycle and the value
+is the length of the cycle. These respiration cycles are not suitable for 
+direct visualization (e.g. respiration rate curve, respiration rate variability),
+but only the average respiration rate can be computed based on them.
 
 #### Heart rate
 
 value data type: **float32**
 
-The time-value pairs represent resting heart rate readings. A new reading is computed every 30 seconds if it can be analyzed from the signal reliably.
+The time-value pairs represent resting heart rate readings. A new reading is
+computed every 30 seconds if it can be analyzed from the signal reliably.
+
+#### Sensor status
+
+value data type: **uint8**
+
+The timestamp represent the time when the status of the sensor changes. The status
+of the sensor can be 1 = operational, 2 = interference, or 3 = unclear, depending
+on the existence of mains frequencies in the signal.
+
+Value | Meaning
+------|--------
+1     | Operational
+2     | Interference
+3     | Unclear
 
 ### Updated
 
