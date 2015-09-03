@@ -101,6 +101,12 @@ You can do this by sending the following information to support@beddit.com.
 * The app author's Beddit username (email used to create Beddit account)
 * One or more redirect URL:s (for example, localhost for development, and one for staging and production environment). Note that other than local host, these need to be HTTPS.
 
+Please note that the redirect URL:s need to include the HTTP/HTTPS part, and
+also the full path. It is not sufficient to match the domain part of the URL.
+
+For development purposes HTTP is fine, but for production use we require the
+use of secure HTTPS URL.
+
 We will then contact you with the required information to use the API:
 
 * client_id
