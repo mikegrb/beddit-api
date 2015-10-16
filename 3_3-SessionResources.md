@@ -123,7 +123,7 @@ where the timestamp is a Unix timestamp (seconds since Jan 1, 1970).
 #### Actigram
 
 The timestamp represents the start time of an epoch and the value is the number
-of detected movements during the epoch. The movements are reported only for 
+of detected movements during the epoch. The movements are reported only for
 epochs during which the user is present on the bed. The epoch is 60 s long.
 
 #### Snoring events
@@ -139,9 +139,14 @@ respiration activity with snoring and have around 3-second resolution.
 value data type: **float32**
 
 The timestamp represents the start time of a respiration cycle and the value
-is the length of the cycle. These respiration cycles are not suitable for 
+is the length of the cycle. These respiration cycles are not suitable for
 direct visualization (e.g. respiration rate curve, respiration rate variability),
 but only the average respiration rate can be computed based on them.
+
+#### Respiration cycle amplitudes
+
+value data type = **float32**.
+The timestamp represents the start time of a respiration cycle and the value is the amplitude of the cycle in arbitrary units.
 
 #### Heart rate
 
@@ -149,6 +154,12 @@ value data type: **float32**
 
 The time-value pairs represent resting heart rate readings. A new reading is
 computed every 30 seconds if it can be analyzed from the signal reliably.
+
+#### Heartbeat
+
+value data type = **float32**
+
+The time-value pairs represent the start timestamp and length (in seconds) of beat-to-beat intervals. There are heartbeats in the track only if they can be analyzed reliably from the signal.
 
 #### Sensor status
 
