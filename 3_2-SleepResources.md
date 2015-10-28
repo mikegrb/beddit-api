@@ -80,10 +80,7 @@ Property | Meaning
 sleep_time_target | The user's personal sleep time target in seconds
 resting_heart_rate | The resting heart rate reading for the night
 average_respiration_rate | The average respiration rate reading over the night
-sleep_efficiency | The proportion of sleep in the measurement period. The
-  time after waking up the last before ending the measurement is not
-  incorporated in the calculation. If the subject did not fall asleep,
-  the value is missing.
+sleep_efficiency | The proportion of sleep in the measurement period. The time after waking up the last before ending the measurement is not incorporated in the calculation. If the subject did not fall asleep, the value is missing.
 sleep_latency | The time it takes to fall asleep, in seconds. If the subject did not fall asleep, the value is missing.
 away_episode_count | Number of absences during the night
 total_snoring_episode_duration | Total amount of snoring, in seconds
@@ -93,33 +90,15 @@ stage_duration_S | Total time in restless sleep state in the measurement period
 stage_duration_W | Total time in wake state in the measurement period
 stage_duration_N | Total amount of "no signal" time in the measurement period
 stage_duration_G | Total amount of "gap" time in the measurement period
-total_nap_duration | Total amount of sleep during periods marked as naps
-  by the "nap_periods" track
+total_nap_duration | Total amount of sleep during periods marked as naps by the "nap_periods" track
 sensor_status | The summarized sensor status based on the "sensor_status" track in the associated sessions.
-activity_index| The number of movements per hour during measurement period.
-  The time it takes to fall asleep and the time after waking up the last before
-  ending the measurement are not incorporated in the calculation.
-evening_HRV_index | A heart rate variability index measured during a 15 min
-  time span during the first third of the night. The index is calculated as the
-  root mean square of successive differences (RMSSD).
-morning_HRV_index | A heart rate variability index measured during a 15 min
-  time span during the last third of the night. The index is calculated as the
-  RMSSD.
-all_night_HRV_index | The heart rate variability index measured during the
-  whole night. The index is calculated as the RMSSD.
-resting_HRV_index | The heart rate variability index measured during a 15
-  min time span centered at the instance of lowest heart rate (one minute mean)
-  during the night. The index is calculated as the RMSSD.
-total_sleep_score | Sleep score calculated based on total sleep time and
-  parameters affecting the quality of sleep. The sleep score presents a
-  measure of the physical (not perceived) goodness of sleep during one night.
-  The sleep score has a value between 0 and 100. In version 1 of the sleep score
-  the value can be over 100.
-sleep_score_version | The version of the sleep score. The version is
-  an integer which is incremented whenever the sleep score algorithm changes
-  significantly. If the property is missing, that should be interpreted as
-  the version being 1, which is the lowest possible version. The purpose of
-  the version is to differentiate sleep scores with different interpretations.
+activity_index| The number of movements per hour during measurement period. The time it takes to fall asleep and the time after waking up the last before ending the measurement are not incorporated in the calculation.
+evening_HRV_index | A heart rate variability index measured during a 15 min time span during the first third of the night. The index is calculated as the root mean square of successive differences (RMSSD).
+morning_HRV_index | A heart rate variability index measured during a 15 min time span during the last third of the night. The index is calculated as the RMSSD.
+all_night_HRV_index | The heart rate variability index measured during the whole night. The index is calculated as the RMSSD.
+resting_HRV_index | The heart rate variability index measured during a 15 min time span centered at the instance of lowest heart rate (one minute mean) during the night. The index is calculated as the RMSSD.
+total_sleep_score | Sleep score calculated based on total sleep time and parameters affecting the quality of sleep. The sleep score presents a measure of the physical (not perceived) goodness of sleep during one night. The sleep score has a value between 0 and 100. In version 1 of the sleep score the value can be over 100.
+sleep_score_version | The version of the sleep score. The version is an integer which is incremented whenever the sleep score algorithm changes significantly. If the property is missing, that should be interpreted as the version being 1, which is the lowest possible version. The purpose of the version is to differentiate sleep scores with different interpretations.
 score_bed_exits | Sleep score item for number of bed exits
 score_amount_of_sleep | Sleep score item for total amount of sleep
 score_snoring | Sleep score item for total duration of snoring episodes
