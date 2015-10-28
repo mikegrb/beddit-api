@@ -124,7 +124,7 @@ Value | Meaning
 3 | Alarm was ignored (stopped automatically after x minutes)
 4 | Alarm was automatically dismissed after user had ignored it several times
 
-#### Actigram
+#### Actigram epochwise
 
 value data type = **float32**
 
