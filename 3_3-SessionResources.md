@@ -122,9 +122,7 @@ where the timestamp is a Unix timestamp (seconds since Jan 1, 1970).
 
 #### Actigram
 
-The timestamp represents the start time of an epoch and the value is the number
-of detected movements during the epoch. The movements are reported only for
-epochs during which the user is present on the bed. The epoch is 60 s long.
+The timestamp represents the start time of an epoch and the value is the number of detected movements during the epoch. The movements are reported only for epochs during which the user is present on the bed. The epoch is 60 s long.
 
 #### Snoring events
 
