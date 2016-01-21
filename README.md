@@ -39,7 +39,7 @@ You should take extra care to use and store it according to the best privacy and
 practices. It is a good policy to inform your user how you intend to use her data and in what
 context.
 
-If you intend to use the API for commercial purposes, please contact us using at sales@beddit.com
+If you intend to use the API for commercial purposes, please contact us at sales@beddit.com
 
 By using the Beddit API you agree that you are fully responsible for your own
 conduct and content, for any possible consequences and you cannot hold Beddit
