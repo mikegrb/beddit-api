@@ -82,3 +82,7 @@ This chapter describes the resources for retrieving session data.
 
 If you need help in using the API, please contact our customer support:
 support@beddit.com.
+
+## Third Party Libraries
+
+- [giginet/beddit-python](https://github.com/giginet/beddit-python)
