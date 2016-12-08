@@ -86,7 +86,7 @@ away_episode_count | Number of absences during the night
 total_snoring_episode_duration | Total amount of snoring, in seconds
 stage_duration_A | Total time in away state in the measurement period, in seconds
 stage_duration_S | Total time in sleep state in the measurement period
-stage_duration_S | Total time in restless sleep state in the measurement period
+stage_duration_R | Total time in restless sleep state in the measurement period
 stage_duration_W | Total time in wake state in the measurement period
 stage_duration_N | Total amount of "no signal" time in the measurement period
 stage_duration_G | Total amount of "gap" time in the measurement period
